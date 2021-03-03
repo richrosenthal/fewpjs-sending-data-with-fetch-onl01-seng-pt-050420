@@ -1,9 +1,7 @@
-// Add your code here
-
-function submitData(name, breed) {
+function submitData(name, email) {
     let formData = {
         name: name,
-        breed: breed
+        email: email
     };
 
     let configObj = {
@@ -15,7 +13,7 @@ function submitData(name, breed) {
         body: JSON.stringify(formData)
     };
 
-    return fetch("http://localhost:3000/dogs", configObj)
+    return fetch("http://localhost:3000/users", configObj)
         .then(function(response) {
           return response.json();
         })
